@@ -33,6 +33,12 @@ export const countReducer = (state = initialState, action: CountActions) => {
         count: 0
       }
 
+    case countActionsType.updatedAt:
+      return {
+        ...state,
+        updatedAt: action.payload.updatedAt
+      }
+
     default:
       return state;
   }

@@ -3,7 +3,8 @@
 <button (click)="clear()" [disabled]="disableClear$ | async">Clear</button>
 
 <div>
-  <span>Counter is :{{ count$ | async }}; Updated at: {{ updatedAt$ | async | date: "yyyy-mm-dd-hh:mm:ss"}} </span>
+  <span>Counter is :{{ count$ | async }}
+    ; Updated : {{ updatedAt$ | async | date: "[yyyy-MMMM-dd] [hh:mm:ss]"}} </span>
 </div>
 
 <router-outlet></router-outlet>
